@@ -4,7 +4,7 @@
 .f-button {
   outline: none;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: $button_size_md_padding;
   cursor: pointer;
   color: $color_light;
   margin: 0 5px;
@@ -34,12 +34,12 @@
 
   &.sm {
     font-size: $size_sm_font-size;
-    padding: $size_sm_padding;
+    padding: $button_size_sm_padding;
   }
 
   &.lg {
     font-size: $size_lg_font-size;
-    padding: $size_lg_padding;
+    padding: $button_size_lg_padding;
   }
 
   &.link {

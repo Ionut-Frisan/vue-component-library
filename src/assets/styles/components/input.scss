@@ -1,0 +1,74 @@
+@import "../utils/colors.scss";
+@import "../utils/constant.scss";
+
+.f-input-container{
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0;
+
+  label{
+    margin-bottom: 0.5rem;
+    flex-shrink: 0;
+    color: $input_font_color;
+  }
+
+  span{
+    width: 100%;
+    display: flex;
+    justify-items: center;
+
+    i{
+      height: fit-content;
+      padding: 0;
+    }
+  }
+
+  &.inline{
+    flex-direction: row;
+    align-items: center;
+    column-gap: 0.5rem;
+
+    label{
+      margin-bottom: 0;
+      flex-shrink: 0;
+    }
+
+    .f-input{
+      width: 100%;
+    }
+  }
+  .f-input{
+    border: 0.1rem solid $input_border_color;
+    outline: none;
+    font-size: $size_md_font-size;
+    padding: $input_size_md_padding;
+    color: $input_font_color;
+
+    &::placeholder{
+      color: $placeholder_color;
+    }
+
+    &:disabled{
+      background-color: $input_disabled_color;
+    }
+    // TODO: is this ok?
+    //&:read-only{
+    //  border: none;
+    //}
+
+    &.rounded{
+      border-radius: $input_border_radius;
+    }
+
+    &.sm {
+      font-size: $size_sm_font-size;
+      padding: $input_size_sm_padding;
+    }
+
+    &.lg {
+      font-size: $size_lg_font-size;
+      padding: $input_size_lg_padding;
+    }
+  }
+}
