@@ -1,7 +1,7 @@
 @import "../utils/colors.scss";
 @import "../utils/constant.scss";
 
-.f-button{
+.f-button {
   outline: none;
   border: none;
   padding: 0.5rem 1rem;
@@ -14,48 +14,52 @@
     border-radius: $button-border-radius;
   }
 
-  &:disabled{
+  &:disabled {
     opacity: 0.6;
     cursor: not-allowed;
   }
 
-  &.loading{
+  &.loading {
     cursor: progress !important;
     opacity: 1;
-    &:disabled{
+
+    &:disabled {
       cursor: progress;
     }
   }
 
-  &.flexible{
+  &.flexible {
     width: 100%;
   }
 
-  &.sm{
-    font-size: 0.8rem;
-    padding: 0.3rem 0.6rem;
+  &.sm {
+    font-size: $size_sm_font-size;
+    padding: $size_sm_padding;
   }
 
-  &.lg{
-    font-size: 1.2rem;
-    padding: 0.7rem 1.4rem;
+  &.lg {
+    font-size: $size_lg_font-size;
+    padding: $size_lg_padding;
   }
 
-  &.link{
+  &.link {
     color: $color_primary;
     background-color: transparent;
   }
 
   &.primary {
     background-color: $color_primary;
-    &:hover:not(:disabled){
+
+    &:hover:not(:disabled) {
       background-color: $color_primary_hover;
     }
-    &.outlined{
+
+    &.outlined {
       color: $color_primary;
       background-color: transparent;
-      outline:1px solid $color_primary;
-      &:hover:not(:disabled){
+      outline: 1px solid $color_primary;
+
+      &:hover:not(:disabled) {
         background-color: $color_primary;
         outline: none;
         color: $color_light;
@@ -65,113 +69,140 @@
 
   &.secondary {
     background-color: $color_secondary;
-    &:hover:not(:disabled){
+
+    &:hover:not(:disabled) {
       background-color: $color_secondary_hover;
     }
-    &.outlined{
+
+    &.outlined {
       color: $color_secondary;
       background-color: transparent;
-      outline:1px solid $color_secondary;
-      &:hover:not(:disabled){
+      outline: 1px solid $color_secondary;
+
+      &:hover:not(:disabled) {
         background-color: $color_secondary;
         outline: none;
         color: $color_light;
       }
     }
   }
+
   &.success {
     background-color: $color_success;
-    &:hover:not(:disabled){
+
+    &:hover:not(:disabled) {
       background-color: $color_success_hover;
     }
-    &.outlined{
+
+    &.outlined {
       color: $color_success;
       background-color: transparent;
-      outline:1px solid $color_success;
-      &:hover:not(:disabled){
+      outline: 1px solid $color_success;
+
+      &:hover:not(:disabled) {
         background-color: $color_success;
         outline: none;
         color: $color_light;
       }
     }
   }
+
   &.warning {
     background-color: $color_warning;
     color: $color_dark;
-    &:hover:not(:disabled){
+
+    &:hover:not(:disabled) {
       background-color: $color_warning_hover;
     }
-    &.outlined{
+
+    &.outlined {
       color: $color_warning;
       background-color: transparent;
-      outline:1px solid $color_warning;
-      &:hover:not(:disabled){
+      outline: 1px solid $color_warning;
+
+      &:hover:not(:disabled) {
         background-color: $color_warning;
         outline: none;
         color: $color_dark;
       }
     }
   }
+
   &.danger {
     background-color: $color_danger;
-    &:hover:not(:disabled){
+
+    &:hover:not(:disabled) {
       background-color: $color_danger_hover;
     }
-    &.outlined{
+
+    &.outlined {
       color: $color_danger;
       background-color: transparent;
-      outline:1px solid $color_danger;
-      &:hover:not(:disabled){
+      outline: 1px solid $color_danger;
+
+      &:hover:not(:disabled) {
         background-color: $color_danger;
         outline: none;
         color: $color_light;
       }
     }
   }
+
   &.info {
     background-color: $color_info;
     color: $color_dark;
-    &:hover:not(:disabled){
+
+    &:hover:not(:disabled) {
       background-color: $color_info_hover;
     }
-    &.outlined{
+
+    &.outlined {
       color: $color_info;
       background-color: transparent;
-      outline:1px solid $color_info;
-      &:hover:not(:disabled){
+      outline: 1px solid $color_info;
+
+      &:hover:not(:disabled) {
         background-color: $color_info;
         outline: none;
         color: $color_dark;
       }
     }
   }
+
   &.light {
     background-color: $color_light;
     color: $color_dark;
-    &:hover:not(:disabled){
+
+    &:hover:not(:disabled) {
       background-color: $color_light_hover;
     }
-    &.outlined{
+
+    &.outlined {
       color: $color_light;
       background-color: transparent;
-      outline:1px solid $color_light;
-      &:hover:not(:disabled){
+      outline: 1px solid $color_light;
+
+      &:hover:not(:disabled) {
         background-color: $color_light;
         outline: none;
         color: $color_dark;
       }
     }
   }
+
   &.dark {
     background-color: $color_dark;
-    &:hover:not(:disabled){
+
+    &:hover:not(:disabled) {
       background-color: $color_dark_hover;
     }
-    &.outlined{
+
+    &.outlined {
       color: $color_dark;
       background-color: transparent;
-      outline:1px solid $color_dark;
-      &:hover:not(:disabled){
+      outline: 1px solid $color_dark;
+
+      &:hover:not(:disabled) {
         background-color: $color_dark;
         outline: none;
         color: $color_light;
