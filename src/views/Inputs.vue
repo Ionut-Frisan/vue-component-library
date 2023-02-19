@@ -67,10 +67,10 @@ const handleChange = (event) => {
   console.log(event);
 }
 </script>
-<style scoped>
+<style>
 .horizontal-separator{
   width: 98%;
-  margin: auto 1rem;
+  margin: 1rem auto;
   height: 0.1rem;
   background-color: #4b5563;
 }
