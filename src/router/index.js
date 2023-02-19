@@ -3,6 +3,7 @@ import {createRouter, createWebHistory} from "vue-router";
 import Buttons from "../views/Buttons.vue";
 import Inputs from "../views/Inputs.vue";
 import Home from "../views/Home.vue";
+import Form from "../views/Form.vue";
 
 const routes = [
     {
@@ -13,6 +14,9 @@ const routes = [
     },
     {
         path: '/inputs', component: Inputs,
+    },
+    {
+        path: '/form', component: Form,
     },
 ]
 

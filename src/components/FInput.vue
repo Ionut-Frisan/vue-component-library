@@ -12,6 +12,11 @@
           :type="computedType"
           :readonly="readonly"
           :disabled="disabled"
+          :required="required"
+          :minlength="minlength"
+          :maxlength="maxlength"
+          :name="name"
+          :autoComplete="autoComplete"
           @change="handleChange"
       />
     </span>
@@ -21,6 +26,8 @@
 <script setup>
 import "../assets/styles/components/input.scss";
 import {computed} from "vue";
+
+// TODO: hint, help?, validation?
 
 const props = defineProps({
   modelValue: String,
@@ -53,6 +60,17 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  required: {
+    type: Boolean,
+    default: false,
+  },
+  minlength: Number,
+  maxlength: Number,
+  autoComplete: {
+    type: Boolean,
+    default: false,
+  },
+  name: String,
   type: {
     type: String,
     default: 'text',
