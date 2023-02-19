@@ -43,6 +43,28 @@
       </div>
       <f-button type="submit" label="Sign up" variant="" length="flexible"></f-button>
     </form>
+    <!--    third row-->
+    <form>
+      <f-input placeholder="Username" label="Username" icon="bi bi-person-circle" required></f-input>
+      <f-input placeholder="Password" label="Password" type="password" icon="bi bi-lock-fill" required></f-input>
+      <f-input placeholder="Repeat password" label="Repeat password" icon="bi bi-lock-fill" type="password" required></f-input>
+      <f-button type="submit" label="Log in" length="flexible" variant="success"></f-button>
+    </form>
+    <form class="form-2-cols">
+      <div class="flex-row">
+        <f-input placeholder="First name" label="First name" icon="bi bi-person-vcard-fill" required></f-input>
+        <f-input placeholder="Last name" label="Last name" icon="bi bi-person-vcard-fill" required></f-input>
+      </div>
+      <div class="flex-row">
+        <f-input placeholder="Username" label="Username" icon="bi bi-person-circle" required></f-input>
+        <f-input placeholder="Email" type="email" label="Email" icon="bi bi-envelope-at-fill" required></f-input>
+      </div>
+      <div class="flex-row">
+        <f-input placeholder="Password" type="password" label="Password" icon="bi bi-lock-fill" required></f-input>
+        <f-input placeholder="Repeat password" type="password" label="Repeat password" icon="bi bi-lock-fill" required></f-input>
+      </div>
+      <f-button type="submit" label="Sign up" variant="" length="flexible"></f-button>
+    </form>
   </div>
 </template>
 
@@ -99,6 +121,7 @@ form {
   .form-2-cols {
     .flex-row {
       flex-wrap: wrap;
+
       & * {
         width: 100%;
       }
