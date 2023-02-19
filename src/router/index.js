@@ -2,6 +2,7 @@ import {createRouter, createWebHistory} from "vue-router";
 
 import Buttons from "../views/Buttons.vue";
 import Inputs from "../views/Inputs.vue";
+import Textareas from "../views/Textareas.vue";
 import Home from "../views/Home.vue";
 import Form from "../views/Form.vue";
 
@@ -14,6 +15,9 @@ const routes = [
     },
     {
         path: '/inputs', component: Inputs,
+    },
+    {
+        path: '/textareas', component: Textareas,
     },
     {
         path: '/form', component: Form,

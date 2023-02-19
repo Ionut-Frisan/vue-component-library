@@ -1,0 +1,91 @@
+@import "../utils/colors.scss";
+@import "../utils/constant.scss";
+
+.f-textarea-container {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0;
+  margin: $input_margin;
+
+  &.inline {
+    flex-direction: row;
+    align-items: start;
+    column-gap: 0.5rem;
+
+    label {
+      margin-bottom: 0;
+      flex-shrink: 0;
+    }
+
+    .f-textarea {
+      width: 100%;
+    }
+  }
+
+  label {
+    margin-bottom: 0.5rem;
+    flex-shrink: 0;
+    color: $input_font_color;
+  }
+
+  .f-textarea {
+    border: 0.1rem solid $input_border_color;
+    flex-grow: 1;
+    outline: none;
+    font-size: $size_md_font-size;
+    padding: $input_size_md_padding;
+    color: $input_font_color;
+    resize: both;
+    min-height: 1.375rem;
+
+    &.rounded {
+      border-radius: $input_border_radius;
+    }
+
+    &::placeholder {
+      color: $placeholder_color;
+    }
+
+    &:disabled {
+      background-color: $input_disabled_bg_color;
+    }
+
+    &:read-only:not(:disabled){
+      color: $input_readonly_color;
+      border: none
+    }
+
+    &:focus{
+      border-color: $input_focus_color;
+      box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.25); // same as $input_focus_color
+      // TODO: dont allow focus on readonly
+      //&:has(input:read-only){
+      //  border: none;
+      //  box-shadow: none;
+      //}
+    }
+
+    &.sm {
+      font-size: $size_sm_font-size;
+      padding: $input_size_sm_padding;
+      min-height: 1.05rem;
+    }
+
+    &.lg {
+      font-size: $size_lg_font-size;
+      padding: $input_size_lg_padding;
+      min-height: 1.7rem;
+    }
+
+    &.resize-none{
+      resize: none;
+    }
+    &.resize-vertical{
+      resize: vertical;
+    }
+    &.resize-horizontal{
+      resize: horizontal;
+    }
+  }
+}
