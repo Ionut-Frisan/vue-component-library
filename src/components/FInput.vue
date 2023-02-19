@@ -1,22 +1,27 @@
 <template>
   <span :class="containerClasses">
     <label v-if="hasLabel">{{ label }}</label>
+    <span :class="inputClasses">
+      <i :class="icon"
+         v-if="hasIcon"
+        :style="iconStyle"
+      ></i>
       <input
-          :class="inputClasses"
           :placeholder="placeholder"
-          :readonly="readonly"
-          :disabled="disabled"
           :value="modelValue"
           :type="computedType"
+          :readonly="readonly"
+          :disabled="disabled"
           @change="handleChange"
       />
+    </span>
   </span>
 </template>
 
 <script setup>
 import "../assets/styles/components/input.scss";
 import {computed} from "vue";
-// TODO add icons + remaining props
+
 const props = defineProps({
   modelValue: String,
   label: String,
@@ -51,7 +56,13 @@ const props = defineProps({
   type: {
     type: String,
     default: 'text',
-  }
+  },
+  icon: String,
+  iconPosition: {
+    type: String,
+    default: 'start',
+  },
+  iconColor: String,
 });
 
 const emits = defineEmits(['update:modelValue', 'change']);
@@ -78,6 +89,7 @@ const inputClasses = computed(() => {
     'f-input',
     sizes.includes(props.size) ? props.size : 'md',
     {rounded: props.rounded},
+    {'icon-end': props.iconPosition === 'end'}
   ]
 })
 
@@ -86,6 +98,14 @@ const containerClasses = computed(() => {
     'f-input-container',
     {inline: props.labelPosition === 'left'}
   ]
+})
+
+const hasIcon = computed(() => !!props.icon && !props.readonly);
+
+const iconStyle = computed(() => {
+  const style = {};
+  if(props.iconColor) style.color = props.iconColor;
+  return style;
 })
 
 const handleChange = (event) => {
