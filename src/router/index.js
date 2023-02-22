@@ -3,6 +3,7 @@ import {createRouter, createWebHistory} from "vue-router";
 import Buttons from "../views/Buttons.vue";
 import Inputs from "../views/Inputs.vue";
 import Textareas from "../views/Textareas.vue";
+import Checkboxes from "../views/Checkboxes.vue";
 import Home from "../views/Home.vue";
 import Form from "../views/Form.vue";
 
@@ -18,6 +19,9 @@ const routes = [
     },
     {
         path: '/textareas', component: Textareas,
+    },
+    {
+        path: '/checkboxes', component: Checkboxes,
     },
     {
         path: '/form', component: Form,
