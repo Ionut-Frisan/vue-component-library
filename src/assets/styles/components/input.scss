@@ -1,0 +1,121 @@
+@import "../utils/colors.scss";
+@import "../utils/constant.scss";
+
+.f-input-container {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0;
+  margin: $input_margin;
+
+  &.inline {
+    flex-direction: row;
+    align-items: center;
+    column-gap: 0.5rem;
+
+    label {
+      margin-bottom: 0;
+      flex-shrink: 0;
+    }
+
+    .f-input {
+      width: 100%;
+    }
+  }
+
+  label {
+    margin-bottom: 0.5rem;
+    flex-shrink: 0;
+    color: $input_font_color;
+  }
+
+  .f-input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border: 0.1rem solid $input_border_color;
+    flex-grow: 1;
+
+    //&.icon-end{
+    //  flex-direction: row-reverse;
+    //}
+
+    &:has(input:disabled) {
+      background-color: $input_disabled_bg_color;
+    }
+
+    &:has(input:focus){
+      border-color: $input_focus_color;
+      box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.25);
+      // TODO: dont allow focus on readonly
+      //&:has(input:read-only){
+      //  border: none;
+      //  box-shadow: none;
+      //}
+    }
+
+    i {
+      height: fit-content;
+      padding: 0;
+      margin: $input_size_md_icon_margin;
+    }
+
+    input {
+      outline: none;
+      font-size: $size_md_font-size;
+      padding: $input_size_md_padding;
+      color: $input_font_color;
+      flex-grow: 1;
+      border: none;
+      border-radius: inherit;
+
+      &:read-only:not(:disabled){
+        color: $input_readonly_color;
+      }
+    }
+
+    i + input {
+      padding-left: 0 !important;
+    }
+
+    &::placeholder {
+      color: $placeholder_color;
+    }
+
+    &:disabled {
+      background-color: transparent;
+    }
+
+    // TODO: is this ok?
+    &:has(input:read-only:not(:disabled)){
+      border: none;
+    }
+
+    &.rounded {
+      border-radius: $input_border_radius;
+    }
+
+    &.sm {
+      input {
+        font-size: $size_sm_font-size;
+        padding: $input_size_sm_padding;
+      }
+      i{
+        font-size: $size_sm_font-size;
+        margin: $input_size_sm_icon_margin;
+      }
+    }
+
+    &.lg {
+      input {
+        font-size: $size_lg_font-size;
+        padding: $input_size_lg_padding;
+      }
+      i{
+        font-size: $size_lg_font-size;
+        margin: $input_size_lg_icon_margin;
+      }
+    }
+  }
+}
